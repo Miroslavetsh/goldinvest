@@ -1,0 +1,29 @@
+body
+{
+   margin: 0;
+   padding: 0;
+   background-color: #F0FFF0;
+   color: #000000;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   text-align: center;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#wb_form-okText1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   text-align: left;
+}
+#wb_form-okText1 div
+{
+   text-align: left;
+}

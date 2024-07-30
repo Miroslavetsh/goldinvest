@@ -1,0 +1,16 @@
+div#container
+{
+   width: 58px;
+   position: relative;
+   margin-top: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
+}
+body
+{
+   text-align: center;
+   margin: 0;
+   background-color: transparent;
+   color: #000000;
+}

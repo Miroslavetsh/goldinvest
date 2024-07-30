@@ -1,0 +1,13 @@
+<FilesMatch ".(php|htm|html)$">
+AddHandler application/x-httpd-lsphp .php .htm .html
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+#AddType application/x-httpd-php .php .htm .html .tpl
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^goldinvest\.com\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.goldinvest\.com\.ua$
+RewriteRule ^/?$ "https\:\/\/goldinvest\.com\.ua\/" [R=301,L]
