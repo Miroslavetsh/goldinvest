@@ -79,3 +79,12 @@
 .fancybox-image {
   object-fit: cover;
 }
+
+.fancybox__text h4 {
+  font-weight: bold;
+}
+
+.fancybox__text {
+  background-color: #fff;
+  padding: 0 16px;
+}

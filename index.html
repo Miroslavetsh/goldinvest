@@ -2029,34 +2029,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <!-- Lightbox for our works -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind('[data-fancybox="gallery"]', {
-        animated: false,
-        Thumbs: false,
-        Toolbar: false,
-        wheel: false,
-        contentClick: false,
-        Carousel: {
-          Panzoom: false,
-          infinite: false,
-        },
-        Images: {
-          zoom: false,
-        },
-      });
-    </script>
-    <script>
-      const container = document.getElementById("our-works-gallery");
-      const options = {
-        infinite: false,
-        Dots: false,
-        Slides: 4,
-        Navigation: false,
-        Gap: 20,
-      };
-
-      new Carousel(container, options);
-    </script>
+    <script src="/js/our-works-gallery.js"></script>
 
     <!-- HoverSignal -->
     <script type="text/javascript">
