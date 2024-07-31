@@ -16,8 +16,15 @@ if(isset($_GET['utm_source'])){
   <head>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    />
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -366,6 +373,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <li><a href="#about">Про нас</a></li>
                   <li><a href="#faq">Часті питання</a></li>
                   <li><a href="#register" class="elect">Залишити заявку</a></li>
+                  <li><a href="#our-works">Наші роботи</a></li>
                   <li><a href="#reviews">Відгуки</a></li>
                   <li class="fixed-hide menu-phone">
                     <span class="fa fa-phone"></span>+38(063)444-0595
@@ -1468,39 +1476,110 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
           </div>
 
-          <div class="our-works-gallery">
-            <a
-              href="/images/our-works/Bucha.jpg"
-              title="Caption for gallery item 1"
-              ><img src="images/our-works/Bucha.jpg" alt="Bucha"
-            /></a>
-            <a
-              href="/images/our-works/Chernihiv.jpg"
-              title="Caption for gallery item 2"
-              ><img src="images/our-works/Chernihiv.jpg" alt="Chernihiv"
-            /></a>
-            <a
-              href="/images/our-works/Chornohvardiiska.jpg"
-              title="Caption for gallery item 3"
-              ><img
-                src="images/our-works/Chornohvardiiska.jpg"
-                alt="Chornohvardiiska"
-            /></a>
-            <a
-              href="/images/our-works/Lebedeva.jpg"
-              title="Caption for gallery item 3"
-              ><img src="images/our-works/Lebedeva.jpg" alt="Lebedeva"
-            /></a>
-            <a
-              href="/images/our-works/Pogreby.jpg"
-              title="Caption for gallery item 3"
-              ><img src="images/our-works/Pogreby.jpg" alt="Pogreby"
-            /></a>
-            <a
-              href="/images/our-works/Sholom.jpg"
-              title="Caption for gallery item 3"
-              ><img src="images/our-works/Sholom.jpg" alt="Sholom"
-            /></a>
+          <div class="our-works-gallery f-carousel" id="our-works-gallery">
+            <div class="f-carousel__viewport">
+              <div class="f-carousel__track">
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Bucha.jpg"
+                    alt="Квартира. Буча. Вул. Гмирі Бориса, 11а"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>Квартира. Буча. Вул. Гмирі Бориса, 11а</h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Bucha.jpg"
+                      title="Квартира. Буча. Вул. Гмирі Бориса, 11а"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Chernihiv.jpg"
+                    alt="Квартира. Чернігів. Вул. Стрілецька, 106"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>Квартира. Чернігів. Вул. Стрілецька, 106</h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Chernihiv.jpg"
+                      title="Квартира. Чернігів. Вул. Стрілецька, 106"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Chornohvardiiska.jpg"
+                    alt="Квартира. Київ. вул. Червоногвардійська (Хоткевича Гната), №8"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>
+                      Квартира. Київ. вул. Червоногвардійська (Хоткевича Гната),
+                      №8
+                    </h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Chornohvardiiska.jpg"
+                      title="Квартира. Київ. вул. Червоногвардійська (Хоткевича Гната), №8"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Lebedeva.jpg"
+                    alt="Квартира. Київ. Вул. Лебедєва-Кумача, 5"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>Квартира. Київ. Вул. Лебедєва-Кумача, 5</h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Lebedeva.jpg"
+                      title="Квартира. Київ. Вул. Лебедєва-Кумача, 5"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Pogreby.jpg"
+                    alt="Будинок. Київська обл. с.Погреби"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>Будинок. Київська обл. с.Погреби</h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Pogreby.jpg"
+                      title="Будинок. Київська обл. с.Погреби"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="images/our-works/Sholom.jpg"
+                    alt="Квартира. Київ. Вул. Шолом Алейхема, 11а"
+                  />
+                  <div class="f-carousel__caption">
+                    <h3>Квартира. Київ. Вул. Шолом Алейхема, 11а</h3>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Sholom.jpg"
+                      title="Квартира. Київ. Вул. Шолом Алейхема, 11а"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1947,10 +2026,36 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       })();
     </script>
 
-    <!-- Lightbox for portfolio -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+    <!-- Lightbox for our works -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-      new SimpleLightbox(".our-works-gallery a");
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        animated: false,
+        Thumbs: false,
+        Toolbar: false,
+        wheel: false,
+        contentClick: false,
+        Carousel: {
+          Panzoom: false,
+          infinite: false,
+        },
+        Images: {
+          zoom: false,
+        },
+      });
+    </script>
+    <script>
+      const container = document.getElementById("our-works-gallery");
+      const options = {
+        infinite: false,
+        Dots: false,
+        Slides: 4,
+        Navigation: false,
+        Gap: 20,
+      };
+
+      new Carousel(container, options);
     </script>
 
     <!-- HoverSignal -->
