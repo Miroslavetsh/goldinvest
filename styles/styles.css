@@ -13,8 +13,6 @@
   border: 2px solid#5b94d9;
 }
 .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
-  background-color: rgba(0, 0, 0, 0.5);
-
   transform: translateY(0);
 }
 
@@ -29,14 +27,14 @@
   right: 0;
   top: 0;
   padding: 4px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 14px;
   text-align: center;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  transform: translateY(40%);
+  transform: translateY(65%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -82,12 +80,6 @@
   object-fit: cover;
 
   transition: all 0.3s ease-in-out;
-}
-
-@media screen and (max-width: 768px) {
-  .our-works-gallery .f-carousel__slide {
-    max-width: 50%;
-  }
 }
 
 .fancybox__content {
@@ -137,4 +129,91 @@
 .f-button.is-prev:disabled {
   opacity: 0.5;
   cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(40%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(0);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .f-carousel {
+    --f-carousel-slide-width: calc((100% - 2 * 28px) / 3);
+  }
+
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(45%);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(35%);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .f-carousel {
+    --f-carousel-slide-width: calc((100% - 28px) / 2);
+  }
+
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(65%);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 50%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(50%);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 50%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .f-carousel {
+    --f-carousel-spacing: 0;
+    --f-carousel-slide-width: 100%;
+  }
+
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(75%);
+  }
+
+  .our-works-gallery .f-carousel__text {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .our-works-gallery .f-carousel__caption {
+    transform: translateY(65%);
+  }
 }
