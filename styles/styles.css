@@ -3,7 +3,7 @@
 .f-carousel {
   --f-carousel-spacing: 28px;
   /* 3 is amount of gaps and 8 is a gap above 3 * 8 = 24 */
-  --f-carousel-slide-width: calc((100% - 3 * 28px ) / 4);
+  --f-carousel-slide-width: calc((100% - 3 * 28px) / 4);
 }
 
 .our-works-gallery .f-carousel__slide {
@@ -11,6 +11,15 @@
   overflow: hidden;
   position: relative;
   border: 2px solid#5b94d9;
+}
+.our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transform: translateY(0);
+}
+
+.our-works-gallery .f-carousel__slide:hover img {
+  transform: scale(1.1);
 }
 
 .our-works-gallery .f-carousel__caption {
@@ -20,19 +29,21 @@
   right: 0;
   top: 0;
   padding: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   font-size: 14px;
   text-align: center;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
+  transform: translateY(40%);
   transition: all 0.3s ease-in-out;
 }
 
 .our-works-gallery .f-carousel__text {
   height: 50%;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .our-works-gallery .f-carousel__caption * {
@@ -40,21 +51,22 @@
 }
 
 .our-works-gallery .f-carousel__caption h3 {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .our-works-gallery .f-carousel__caption p {
-  font-size: 14px;
+  font-size: 16px;
+  color: #5b94d9;
 }
 
 .our-works-gallery .f-carousel__caption a {
   display: inline-block;
   color: #fff;
   background-color: #5b94d9;
-  padding: 8px 12px;
+  padding: 4px 6px;
   display: inline-block;
-  margin-bottom: 8px;
   border-radius: 2px;
+  font-size: 12px;
 
   transition: background-color 0.3s, color 0.3s ease-in-out;
 }
@@ -68,6 +80,8 @@
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
