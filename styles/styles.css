@@ -35,7 +35,7 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  transform: translateY(65%);
+  transform: translateY(55%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .our-works-gallery .f-carousel__caption h3 {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .our-works-gallery .f-carousel__caption p {
@@ -195,7 +195,7 @@
   }
 
   .our-works-gallery .f-carousel__caption {
-    transform: translateY(65%);
+    transform: translateY(55%);
   }
 
   .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
