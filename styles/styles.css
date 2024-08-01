@@ -12,8 +12,9 @@
   position: relative;
   border: 2px solid#5b94d9;
 }
+
 .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
-  transform: translateY(0);
+  transform: translateY(20%);
 }
 
 .our-works-gallery .f-carousel__slide:hover img {
@@ -131,6 +132,19 @@
   cursor: not-allowed !important;
 }
 
+/* Reviews embedded block */
+.elfsight-app-892f3e2d-a29d-4959-95d7-80949539bd09 {
+  font-family: "Trebuchet MS", "Helvetica", "Arial", sans-serif;
+}
+
+.elfsight-app-892f3e2d-a29d-4959-95d7-80949539bd09 .es-widget-title * {
+  font-weight: 400;
+}
+.elfsight-app-892f3e2d-a29d-4959-95d7-80949539bd09 .es-widget-title em {
+  font-style: normal;
+
+}
+
 @media screen and (max-width: 1199px) {
   .our-works-gallery .f-carousel__caption {
     transform: translateY(40%);
@@ -139,7 +153,11 @@
 
 @media screen and (max-width: 991px) {
   .our-works-gallery .f-carousel__caption {
-    transform: translateY(0);
+    transform: translateY(5%);
+  }
+
+  .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
+    transform: translateY(5%);
   }
 
   .our-works-gallery .f-carousel__text {
@@ -180,6 +198,10 @@
     transform: translateY(65%);
   }
 
+  .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
+    transform: translateY(25%);
+  }
+
   .our-works-gallery .f-carousel__text {
     height: 50%;
     font-size: 16px;
@@ -207,13 +229,22 @@
     transform: translateY(75%);
   }
 
+
+  .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
+    transform: translateY(55%);
+  }
+
   .our-works-gallery .f-carousel__text {
-    height: 50%;
+    height: 30%;
   }
 }
 
 @media screen and (max-width: 390px) {
   .our-works-gallery .f-carousel__caption {
     transform: translateY(65%);
+  }
+
+  .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
+    transform: translateY(45%);
   }
 }
