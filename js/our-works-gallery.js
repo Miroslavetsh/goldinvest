@@ -24,8 +24,6 @@
     infinite: false,
     Dots: false,
     Slides: 4,
-    Navigation: false,
-    Gap: 20,
   };
 
   new Carousel(container, options);
