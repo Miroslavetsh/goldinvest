@@ -14,7 +14,7 @@
 }
 
 .our-works-gallery .f-carousel__slide:hover .f-carousel__caption {
-  transform: translateY(20%);
+  transform: translateY(30%);
 }
 
 .our-works-gallery .f-carousel__slide:hover img {
@@ -35,12 +35,12 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  transform: translateY(55%);
+  transform: translateY(56%);
   transition: all 0.3s ease-in-out;
 }
 
 .our-works-gallery .f-carousel__text {
-  height: 50%;
+  height: 35%;
   margin-bottom: 12px;
   font-weight: 700;
 }
