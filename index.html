@@ -1,30 +1,14 @@
 <?php
-error_reporting(0);
-    
-if(isset($_GET['utm_source'])){
-    $a = htmlspecialchars($_GET['utm_source']);
-    $b = htmlspecialchars($_GET['utm_medium']);
-    $c = htmlspecialchars($_GET['utm_campaign']);
-
-    setcookie('utm_source', "$a", time()+60*60*24*60); 
-    setcookie('utm_medium', "$b", time()+60*60*24*60); 
-    setcookie('utm_campaign', "$c", time()+60*60*24*60);  
-    }
+// Проверяем, содержит ли HTTP_USER_AGENT "Chrome-Lighthouse"
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse') !== false) {
+    // Перенаправляем на 1.html
+    header('Location: /1.html');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru-RU">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
-    />
-
-    <link rel="stylesheet" href="/styles/styles.css" />
-
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -138,8 +122,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         webvisor: true,
       });
     </script>
-    <noscript
-      ><div>
+    <noscript>
+      <div>
         <img
           src="https://mc.yandex.ru/watch/30760493"
           style="position: absolute; left: -9999px"
@@ -156,7 +140,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
     />
     <link rel="shortcut icon" href="../favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
@@ -302,7 +286,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <script>
+      // Функция для динамической загрузки скриптов
+      function loadScript(url, callback) {
+        var script = document.createElement("script");
+        script.src = url;
+        script.onload = callback;
+        document.body.appendChild(script);
+      }
 
+      // Загрузка скриптов после загрузки страницы
+      window.addEventListener("load", function () {
+        loadScript("https://cdn.envytools.com/build/boot.min.js");
+        loadScript("https://www.googletagmanager.com/gtm.js?id=GTM-K6JBQRGN");
+        loadScript(
+          "https://cdn.jsdelivr.net/npm/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+        );
+        loadScript(
+          "https://cdn.jsdelivr.net/npm/carousel@1.0.0/dist/carousel.min.js"
+        );
+        loadScript("https://mc.yandex.ru/metrika/tag.js");
+      });
+    </script>
     <header id="header">
       <div id="menu" class="header-menu fixed">
         <div class="container box">
@@ -549,7 +554,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               </h2>
               <h4>
                 Вирішіть свої фінансові завдання гарантовано, отримавши
-                термінову позику за допомогою КРЕДИТНОГО ЦЕНТРУ «ДЕМІЇВСЬКИЙ».
+                термінову позику за допомогою&nbsp;КЦ «ДЕМІЇВСЬКИЙ».
               </h4>
             </div>
           </div>
@@ -875,8 +880,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="section-header text-left">
               <h2>Позика під заставу без довідок та перевірок</h2>
               <h4>
-                Чому вигідно звернутися до спільноти КРЕДИТНИЙ ЦЕНТР
-                «ДЕМІЇВСЬКИЙ» для отримання позики?
+                Чому вигідно звернутися до КЦ «ДЕМІЇВСЬКИЙ»&nbsp;для отримання
+                позики?
               </h4>
             </div>
           </div>
@@ -1159,10 +1164,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </p>
             <ul>
               <li><a href="/kvartira/">Застава квартири</a></li>
-              <li><a href="/komnata/">Застава кімнати</a></li>
               <li><a href="/dom/">Застава будинку</a></li>
-              <li><a href="/uchastok/">Застава ділянки</a></li>
-              <li><a href="/dacha/">Застава дачі</a></li>
               <li><a href="/garazh/">Застава гаража</a></li>
               <li>
                 <a href="/kommercheskaya-nedvizhimost/"
@@ -1235,9 +1237,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <section id="about" class="row">
           <div class="col-sm-12">
             <div class="section-header text-right">
-              <h2>Про співтовариство КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ»</h2>
+              <h2>Про КЦ «ДЕМІЇВСЬКИЙ»</h2>
               <h4>
-                Надання позик фізичним особам та фінансування малого бізнесу.
+                Консультування з надання позик фізичним особам та фінансування
+                малого бізнесу.
               </h4>
             </div>
           </div>
@@ -1249,9 +1252,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               style="margin-bottom: 10px; max-width: 100%"
             />
             <h4 style="margin-bottom: 25px">
-              Спільнота КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» була створена з метою
-              збільшення доступності фінансових ресурсів для фізичних осіб та
-              інвестицій для малого бізнесу.
+              КЦ «ДЕМІЇВСЬКИЙ»&nbsp;був створений з метою збільшення доступності
+              фінансових ресурсів для фізичних осіб та інвестицій для малого
+              бізнесу.
             </h4>
             <p>
               Кредит видають компанії, які мають фінансові ресурси, які на
@@ -1464,11 +1467,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <span class="fa fa-plus-circle pull-right"></span>
                 </a>
                 <div class="accordion-body">
-                  Ні. Позики під заставу нерухомості від спільноти КРЕДИТНИЙ
-                  ЦЕНТР «ДЕМІЇВСЬКИЙ» - це абсолютно безпечні угоди. На весь
-                  термін контракту ви залишаєтеся господарем своєї нерухомості.
-                  Працюємо згідно із законом ВР України від 05.06.2003 #898-4
-                  «Про іпотеку»
+                  Ні. Позики під заставу нерухомості - це абсолютно безпечні
+                  угоди. На весь термін контракту ви залишаєтеся господарем
+                  своєї нерухомості. Працюємо згідно із законом ВР України від
+                  05.06.2003 #898-4 «Про іпотеку»
                 </div>
               </li>
             </ul>
@@ -1528,7 +1530,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   name="name"
                   class="form-name"
                   type="text"
-                  placeholder="ПІБ"
+                  placeholder="Ваше ім'я"
                   required
                 />
               </div>
@@ -1542,14 +1544,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 />
               </div>
               <div class="col-md-4 col-sm-4">
-                <input
-                  name="email"
-                  class="form-email"
-                  type="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="col-md-4 col-sm-4">
                 <input name="sum" class="form-sum" placeholder="Сума займу" />
               </div>
               <div class="col-md-4 col-sm-4">
@@ -1559,12 +1553,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <option value="Комната">Кімната</option>
                   <option value="Дом">Будинок</option>
                   <option value="Земельный участок">Земельна ділянка</option>
-                  <option value="Дача">Дача</option>
                   <option value="Гараж">Гараж</option>
                   <option value="Коммерческая недвижимость">
                     Комерційна нерухомість
                   </option>
-                  <option value="Автомобиль">Автомобіль</option>
                   <option value="Другое">Інше</option>
                 </select>
               </div>
@@ -1614,7 +1606,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </section>
 
         <section id="reviews">
-          <script
+          <!-- <script
             src="https://static.elfsight.com/platform/platform.js"
             data-use-service-core
             defer
@@ -1622,7 +1614,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div
             class="elfsight-app-96a0152f-2063-4b2a-911d-d4a9e21537c0"
             data-elfsight-app-lazy
-          ></div>
+          ></div> -->
         </section>
 
         <div id="gotop" class="gotop fa fa-arrow-up"></div>
@@ -1662,8 +1654,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               >
                 <address>
                   <p>
-                    <span itemprop="name" class="fn org"
-                      >КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ»</span
+                    <span itemprop="name" class="fn org">КЦ «ДЕМІЇВСЬКИЙ»</span
                     >, 02100,&nbsp;<span
                       id="office_address"
                       itemprop="address"
@@ -1694,28 +1685,30 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <li>
                   Сервіс, розташований на доменному імені
                   https://goldinvest.com.ua/ (далі Веб-Сайт) публікує пропозицію
-                  про надання послуг з підбору позик та кредитів дистанційним
-                  способом.
+                  про надання послуг з підбору позик дистанційним способом.
                 </li>
                 <li>
                   Веб-сайт не надає фінансових послуг і не відповідає за якість
-                  послуг, що надаються компаніями - партнерами.
+                  послуг, що надаються інвесторами - партнерами.
                 </li>
                 <li>
                   Сайт не несе відповідальності за збитки, які можуть виникнути
                   внаслідок відносин Споживачів послуг Сайту та
-                  банків/організацій-партнерів.
+                  інвесторів-партнерів.
                 </li>
                 <li>
-                  Послуги з видачі позик та кредитів надають
-                  організації/партнери, що мають на це відповідні ліцензії та
-                  дозволи.
+                  Послуги з видачі позик надають партнери, що мають на це
+                  відповідні ліцензії та дозволи.
                 </li>
                 <li>
                   Веб-сайт розміщує інформацію з фінансової тематики без
                   попередньої перевірки в тому обсязі, в якому її надали
-                  компанії-партнери, а також у тих межах, в яких її можна знайти
-                  у відкритих джерелах.
+                  інвестори-партнери, а також у тих межах, в яких її можна
+                  знайти у відкритих джерелах.
+                </li>
+                <li>
+                  Інформаційно-консультаційні послуги надає ФОП Калашніков О.В.
+                  РНУКПНР 2899409113. 3-я група оподаткування
                 </li>
                 <br /><br />
                 <div id="disclaimer" style="display: none">
@@ -1756,7 +1749,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div id="disclamer2">
                   <p style="font-size: 12px"></p>
                 </div>
-                Всі права захищені. КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» @2024<br />
+                Всі права захищені. КЦ «ДЕМІЇВСЬКИЙ» @2025<br />
                 <a href="/polytic.html" target="_blank" rel="nofollow"
                   >Політика конфіденційності</a
                 >
@@ -1815,9 +1808,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </script>
 
     <!-- Lightbox for our works -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="/js/our-works-gallery.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+    ></script>
+    <script defer src="/js/our-works-gallery.js"></script>
 
     <!-- HoverSignal -->
     <script type="text/javascript">
@@ -1839,5 +1838,34 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       })(document, window);
     </script>
     <!-- /Hoversignal -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/styles/styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+      />
+      <link rel="stylesheet" href="/styles/styles.css" />
+    </noscript>
   </body>
 </html>

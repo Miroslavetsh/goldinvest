@@ -44,7 +44,12 @@ jQuery('#menu-ul li').click(function () {
 </script>
 
 
-
+<?php
+define("NITROPACK_HOME_URL", "goldinvest.com.ua"); 
+define("NITROPACK_SITE_ID", "PNWBSHuAGcimCnJZFOidJwEKoxNxeDuE"); 
+define("NITROPACK_SITE_SECRET", "VpWpdzYjQZvvdewbaCADAwdukrh0gQ9KCYpsT96ug3mmNihW7VMqpsXy3HT544RX"); 
+include_once "</nitropack-sdk/>/bootstrap.php";
+?>
 
 
 <!-- Yandex.Metrika counter -->
