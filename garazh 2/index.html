@@ -1,0 +1,1360 @@
+<?php
+error_reporting(0);
+    
+if(isset($_GET['utm_source'])){
+    $a = htmlspecialchars($_GET['utm_source']);
+    $b = htmlspecialchars($_GET['utm_medium']);
+    $c = htmlspecialchars($_GET['utm_campaign']);
+
+    setcookie('utm_source', "$a", time()+60*60*24*60); 
+    setcookie('utm_medium', "$b", time()+60*60*24*60); 
+    setcookie('utm_campaign', "$c", time()+60*60*24*60);  
+    }
+?>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru-RU">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    />
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PJ65SJTS");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-5958660-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-5958660-4");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11224305709"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-11224305709");
+    </script>
+
+    <script type="text/javascript">
+      var yaParams = { ipaddress: "<? echo $_SERVER['REMOTE_ADDR']; ?>" };
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+      ym(30760493, "init", {
+        params: window.yaParams,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/30760493"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <title>
+      Деньги под залог гаража в Киеве и области - Кредиты, Займы, Деньги
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta
+      name="description"
+      content="Деньги под залог гаража или паркинга в Киеве и области  . Деньги под залог гаражей и парковочных мест без справок и проверок срочно в день обращения, низкий процент"
+    />
+    <link rel="canonical" href="index.html" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Деньги под залог гаража в Киеве и области  "
+    />
+    <meta
+      property="og:description"
+      content="Деньги под залог гаража или паркинга в Киеве и области  . Деньги под залог гаражей и парковочных мест без справок и проверок срочно в день обращения, низкий процент"
+    />
+    <meta property="og:url" content="https://goldinvest.com.ua/garazh/" />
+    <meta
+      property="og:image"
+      content="/wp-content/themes/creditors/images/slides/garage1.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="/wp-content/themes/creditors/images/slides/garage1.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Деньги под залог гаража в Киеве и области  "
+    />
+    <meta
+      name="twitter:description"
+      content="Деньги под залог гаража или паркинга в Киеве и области  . Деньги под залог гаражей и парковочных мест без справок и проверок срочно в день обращения, низкий процент"
+    />
+    <meta
+      name="twitter:image"
+      content="/wp-content/themes/creditors/images/slides/garage1.jpg"
+    />
+    <style>
+      .header-bg {
+        overflow: hidden;
+      }
+      .preloader div,
+      .preloader,
+      .preloader:before,
+      .preloader:after {
+        background-color: #5b94d9;
+      }
+      #preloader {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #efefef;
+        z-index: 45;
+        top: 0;
+        left: 0;
+      }
+      #preloader.ready {
+        display: none;
+      }
+      .preloader {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        top: 46%;
+        top: -webkit-calc(50% - 6px);
+        top: calc(50% - 6px);
+        left: 46%;
+        left: -webkit-calc(50% - 6px);
+        left: calc(50% - 6px);
+        border-radius: 12px;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: preloader 1s ease-in-out infinite;
+        animation: preloader 1s ease-in-out infinite;
+      }
+      .preloader:before {
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        top: 0;
+        left: -25px;
+        height: 12px;
+        width: 12px;
+        border-radius: 12px;
+      }
+      .preloader:after {
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        top: 0;
+        left: 25px;
+        height: 12px;
+        width: 12px;
+        border-radius: 12px;
+      }
+      @-webkit-keyframes preloader {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+        }
+        100% {
+          -webkit-transform: rotate(180deg);
+        }
+      }
+      @-o-keyframes preloader {
+        0% {
+          -o-transform: rotate(0deg);
+        }
+        50% {
+          -o-transform: rotate(180deg);
+        }
+        100% {
+          -o-transform: rotate(180deg);
+        }
+      }
+      @keyframes preloader {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PJ65SJTS"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header id="header">
+      <div id="menu" class="header-menu fixed">
+        <div class="container box">
+          <div class="row">
+            <nav class="col-sm-12">
+              <div class="navbar-header">
+                <button
+                  id="mbmenbtn"
+                  type="button"
+                  class="navbar-toggle collapsed"
+                >
+                  <span class="sr-only">Навигация</span>
+                  <span class="icon-bar"></span> <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand logo sticky-hide">
+                  <a href="/">
+                    <img
+                      src="../../wp-content/themes/creditors/images/logoe2.png"
+                      alt="КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» "
+                      onmouseover="$(this).attr('src', '/wp-content/themes/creditors/images/logoe.png')"
+                      onmouseout="$(this).attr('src', '/wp-content/themes/creditors/images/logoe2.png')"
+                    />
+                  </a>
+                </span>
+              </div>
+              <div class="navbar-collapse collapse sticky-hide callback-box">
+                <a href="#callbackwidget2" class="callback-btn2"
+                  >Замовити дзвінок</a
+                >
+              </div>
+              <div class="phone-box sticky-hide">
+                <div
+                  class="phone"
+                  title="Не дозвонились? Мы перезвоним вам на номер, с которого вы звонили!"
+                >
+                  <span class="fa fa-phone"></span>
+                  <span id="phone-1"
+                    ><a href="tel:+380634440595" class="phone-link"
+                      >+38(063)444-0595</a
+                    ></span
+                  >
+                </div>
+                <div class="navbar-collapse collapse worktime-box">
+                  <span class="fa fa-clock-o"></span> Щоденно з 8:00 до 21:00
+                </div>
+              </div>
+              <div class="navbar-collapse collapse sticky-hide city-box">
+                <a href="#" onclick="return false;" class="city"
+                  >Київська обл.</a
+                >
+              </div>
+              <div
+                id="mobmenuanav"
+                class="navbar-collapse collapse text-center"
+              >
+                <ul class="nav navbar-nav" id="menu-ul">
+                  <li class="current">
+                    <a
+                      href="#header"
+                      style="font-size: 2.5rem; font-weight: normal"
+                      class="fa fa-home"
+                    ></a>
+                  </li>
+                  <li><a href="#calculator">Калькулятор</a></li>
+                  <li><a href="#our-works">Видані позики</a></li>
+                  <li><a href="#register" class="elect">Залишити заявку</a></li>
+                  <li><a href="#reviews">Відгуки</a></li>
+                  <li class="fixed-hide menu-phone">
+                    <span class="fa fa-phone"></span>+38(063)444-0595
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header-cta">
+        <div class="container">
+          <div class="row">
+            <div class="blk">
+              <h1>Кредит під заставу гаражу від 17,9% річних!</h1>
+              <h2 style="color: white">
+                Отримайте гроші під заставу терміново та без підтвердження
+                доходів
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="blk">
+              <input
+                type="submit"
+                value="Залишити заявку"
+                name="submit"
+                class="goregister"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bg">
+        <div id="preloader">
+          <div class="preloader"></div>
+        </div>
+        <div class="main-slider" id="main-slider">
+          <ul class="slides">
+            <li>
+              <img
+                src="../../wp-content/themes/creditors/images/slides/garage1.jpg"
+                alt="Займ под залог дома в Киеве и области  "
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="container box">
+        <section id="features" class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="event-info">
+              <div class="icon fa fa-rocket"></div>
+              <div class="info">
+                <h3>За 24 години</h3>
+                <span>від моменту подання заявки до отримання грошей</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="event-info">
+              <div class="icon fa fa-check"></div>
+              <div class="info">
+                <h3>Без довідок</h3>
+                <span>без підтвердження доходів, довідок та поручителів</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="event-info">
+              <div class="icon fa fa-history"></div>
+              <div class="info">
+                <h3>З поганою історією</h3>
+                <span>кредитна історія не має значення для позики</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="event-info">
+              <div class="icon fa fa-thumbs-up"></div>
+              <div class="info">
+                <h3>Від 17,9% річних</h3>
+                <span>низька та прозора процентна ставка</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="calculator" class="row">
+          <div class="col-sm-12">
+            <div class="section-header text-left">
+              <h2>Кредитный калькулятор</h2>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_sum">Сума займу:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="500 000 ₴"
+                  name="calc_sum"
+                  id="calc_sum"
+                  class="calc-value"
+                />
+              </div>
+              <div class="col-sm-12">
+                <input
+                  type="range"
+                  min="100000"
+                  max="5000000"
+                  step="50000"
+                  value="500000"
+                  name="calc_sum_range"
+                  id="calc_sum_range"
+                  class="calc-range"
+                />
+                <span class="range-min">від 20 000 ₴</span>
+                <span class="range-max">до 5 000 000 ₴</span>
+              </div>
+            </div>
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_term">Термін позики:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="36 м."
+                  name="calc_term"
+                  id="calc_term"
+                  class="calc-value"
+                />
+              </div>
+              <div class="col-sm-12">
+                <input
+                  type="range"
+                  min="1"
+                  max="240"
+                  step="1"
+                  value="36"
+                  name="calc_term_range"
+                  id="calc_term_range"
+                  class="calc-range"
+                />
+                <span class="range-min">від 61 дня</span>
+                <span class="range-max">до 15 років</span>
+              </div>
+            </div>
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_rate">Процентна ставка:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="15%"
+                  name="calc_rate"
+                  id="calc_rate"
+                  class="calc-value"
+                />
+              </div>
+              <div class="col-sm-12">
+                <input
+                  type="range"
+                  min="15"
+                  max="60"
+                  step="0.1"
+                  value="15"
+                  name="calc_rate_range"
+                  id="calc_rate_range"
+                  class="calc-range"
+                />
+                <span class="range-min">від 15% годовых</span>
+                <span class="range-max">до 60% годовых</span>
+              </div>
+            </div>
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_payment_type">Вид платежу:</label>
+              </div>
+              <div class="col-sm-6">
+                <select
+                  name="calc_payment_type"
+                  id="calc_payment_type"
+                  class="calc-value"
+                >
+                  <option value="1">ануїтетний</option>
+                  <option value="2">тільки відсотки</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_payment">Щомісячний платіж:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="17 333 ₴"
+                  name="calc_payment"
+                  id="calc_payment"
+                  class="calc-value"
+                />
+              </div>
+              <div class="col-sm-12">
+                <input
+                  type="range"
+                  min="3467"
+                  max="173327"
+                  step="1"
+                  value="17333"
+                  name="calc_payment_range"
+                  id="calc_payment_range"
+                  class="calc-range"
+                />
+                <span class="range-min" id="min_payment">від 3 467 ₴</span>
+                <span class="range-max" id="max_payment">до 173 327 ₴</span>
+              </div>
+            </div>
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_payments_sum">Сума до виплати:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="623 976 ₴"
+                  name="calc_payments_sum"
+                  id="calc_payments_sum"
+                  class="calc-value"
+                  readonly="readonly"
+                />
+              </div>
+            </div>
+            <div class="calc-group">
+              <div class="col-sm-6">
+                <label for="calc_overpayment">Переплата відсотків:</label>
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  value="123 976 ₴"
+                  name="calc_overpayment"
+                  id="calc_overpayment"
+                  class="calc-value"
+                  readonly="readonly"
+                />
+              </div>
+            </div>
+            <hr class="style" />
+            <div class="calc-group">
+              <div class="col-sm-12">
+                <input
+                  type="submit"
+                  value="Графік платежів"
+                  name="calc-shedule"
+                  class="calc-shedule-show"
+                />
+                <input
+                  type="submit"
+                  value="Залишити заявку"
+                  name="submit"
+                  class="goregister"
+                />
+              </div>
+            </div>
+          </div>
+          <span style="display: block; text-align: center" id="preds"
+            >За рекомендацію наших послуг <b>100$</b> у подарунок у день
+            підписання договору з новим клієнтом.</span
+          >
+        </section>
+        <section id="zaimpreim" class="row">
+          <div class="col-sm-12">
+            <div class="section-header text-left">
+              <h2>
+                Гроші у борг під заставу гаражу. Акція! Перший місяць-пільговий
+                %
+              </h2>
+              <h4>
+                Чому вигідно звернутися до спільноти КРЕДИТНИЙ ЦЕНТР
+                «ДЕМІЇВСЬКИЙ» для отримання позики?
+              </h4>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <table class="table table-hover table-striped conditions">
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Термінове оформлення</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Без поручителів</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Без довідок про доходи</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>З поганою кредитною історією</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>За 4 документами</strong>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <table class="table table-hover table-striped conditions">
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Без прихованих платежів та комісій</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Без посередників, безпосередньо від кредитора</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Низька ставка від 17,9% річних</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Швидка та реальна оцінка об'єкта</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left">
+                  <span class="icon fa fa-check"></span>
+                  <strong>Кредити на будь-які цілі</strong>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <section id="landtext" class="row">
+          <div class="col-md-12 col-sm-12">
+            <div
+              class="content-img"
+              style="
+                float: left;
+                padding: 5px;
+                border: 2px solid #ddd;
+                margin: 0px 15px 10px 0px;
+                max-width: 100%;
+                border-radius: 5px;
+              "
+            >
+              <img
+                src="../../wp-content/themes/creditors/images/content/moneyhouse1.jpg"
+                alt="кредит под залог дома"
+                style="max-width: 100%"
+              />
+            </div>
+            <p>
+              Кредит під заставу приватного гаражу – один із самих&nbsp;<strong
+                >простих способів</strong
+              >
+              швидко отримати потрібну суму для непередбачених витрат або на
+              розвиток бізнесу, якщо вам відмовили у банку.
+              <strong>Умови кредиту</strong> під заставу гаражу у партнерів
+              спільноти КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ»&nbsp;<strong
+                >вигідні, а вимоги до позичальників - мінімальні</strong
+              >.
+            </p>
+            <p>
+              Ваш приватний гараж може бути як у Києві так і області. Ми можемо
+              допомогти оформити позику на вже готовий, зареєстрований гараж.
+              Якщо ваш гараж ще на стадії будівництва, то в цьому випадку
+              оформляється&nbsp;<a href="/uchastok/"
+                >позику під заставу земельної ділянки</a
+              >, а гараж, що будується на території, враховується при оцінці
+              об'єкта нерухомості. Це пов'язано з тим, що ви можете отримати
+              гроші у борг під заставу нерухомості, яка вже офіційно оформлена у
+              власність.
+            </p>
+            <p>Ви отримаєте кредит під заставу приватного гаражу:</p>
+            <ul style="margin-left: 30px; clear: both">
+              <li>швидко - аванс протягом години;</li>
+              <li>без зайвих перевірок;</li>
+              <li>під вигідний відсоток;</li>
+              <li>без паперової тяганини;</li>
+              <li>до 80% вартості гаражу;</li>
+              <li>
+                без поручителів, довідок і навіть із негативною кредитною
+                історією.
+              </li>
+            </ul>
+            <p>
+              Потрібні гроші під заставу гаражу, але боїтеся відмови, як у
+              банку? КРЕДИТНИЙ ЦЕНТР "ДЕМІЇВСЬКИЙ"<strong
+                >&nbsp;лояльний до всіх позичальників</strong
+              >, тому ризик відмови у видачі позики мінімальний. Особі, яка
+              бажає отримати кредит під заставу гаражу,&nbsp;<strong
+                >не потрібно</strong
+              >
+              пред'являти довідки про доходи або шукати поручителів. Достатньо
+              лише мінімального пакета документів, що підтверджують особу
+              позичальника та право власності на гараж.
+            </p>
+            <div
+              class="content-img"
+              style="
+                float: right;
+                padding: 5px;
+                margin: 0px 15px 10px 0px;
+                max-width: 100%;
+              "
+            >
+              <img
+                src="../../wp-content/themes/creditors/images/logoe.png"
+                alt="КРЕДИТНЫЙ ЦЕНТР «ДЕМЕЕВСКИЙ"
+                style="max-width: 100%"
+              />
+            </div>
+            <p>
+              Щоб взяти кредит під заставу гаражу, потрібно
+              <strong>зателефонувати нам або залишити заявку онлайн</strong>.
+              Наш менеджер передзвонить вам та запропонує найкращі умови
+              отримання позики. Оцінка та прийняття рішення проводяться протягом
+              одного дня, <strong>цьго ж дня</strong> Ви можете отримати гроші.
+              Щоб отримати гроші під заставу гаражу необхідно обов'язково
+              укласти договір.
+            </p>
+          </div>
+        </section>
+        <section id="text" class="row">
+          <div class="col-md-12 col-sm-12">
+            <h2>Позика під заставу приватного гаражу</h2>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <p>
+              Кредитування під заставу стає дедалі популярнішим. На відміну від
+              споживчих продуктів у банках, вони доступніші і вигідніші. Як
+              забезпечення можна використовувати будь-які об'єкти нерухомості.
+              Позика під заставу гаражу в Україні – оптимальне рішення та
+              можливість швидко отримати велику суму грошей без поручителів та
+              довідок з роботи.
+            </p>
+            <p>
+              Виникла складна фінансова ситуація, а КІ зіпсована? За допомогою
+              компанії КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» ви можете оформити позику
+              під заставу приватного чи заміського гаражу. Гроші будуть на руках
+              у день звернення. Жодних нервів, як при отриманні споживчого
+              кредиту в банку.
+            </p>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <h2>Переваги кредиту під заставу гаражу</h2>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <p>Термінова позика під заставу власності має переваги:</p>
+            <ul>
+              <li>
+                Довгий термін погашення. У банку середній період виплати боргу –
+                від 2 до 5 років. Заставне кредитування пропонує більш гнучкі
+                терміни. Період віддачі збільшується за пролонгацією кредитного
+                договору.
+              </li>
+              <li>Знижена відсоткова ставка – від 1,5% на місяць.</li>
+              <li>
+                Збільшення суми позики. Розмір позички залежить від ринкової
+                вартості майна, що закладається. Можливе видання значних сум –
+                до 15 мільйонів гривень.
+              </li>
+              <li>
+                Швидке схвалення та оформлення. За наявності застави інші
+                критерії оцінки позичальника йдуть на другий план. Можна взяти
+                гроші, маючи зіпсовану кредитну історію чи не офіційний дохід.
+              </li>
+              <li>
+                Право власності зберігається період кредитування. Позичальник
+                може скористатися приватним гаражом у період виплати боргу.
+                Накладаються лише незначні обмеження.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <h2>Вимоги до застави</h2>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <p>
+              При заставному кредитуванні у банку не лише позичальник, а й
+              нерухомість має відповідати вимогам:
+            </p>
+            <ul>
+              <li>
+                Об'єкт є власністю людини – є офіційне доказ права володіння.
+              </li>
+              <li>
+                Майно, що передається, відноситься до категорії не житлових.
+              </li>
+              <li>Гараж у нормальному стані. Є всі інженерні комунікації.</li>
+              <li>Гараж, що закладається, є зареєстрованим.</li>
+              <li>
+                Квадратні метри знаходяться на території Києва чи області. Деякі
+                банки вимагають, щоб об'єкт застави був у присутності
+                відділення.
+              </li>
+              <li>
+                Ліквідність – можливість швидкої реалізації майна за відсутності
+                оплати із боку позичальника.
+              </li>
+              <li>
+                Відсутність обтяжень. Володіння не повинно перебувати під
+                арештом або бути об'єктом судових розглядів із третіми особами
+                за боргами.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <h2>Де взяти кредит під заставу гаражу?</h2>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <p>
+              У Києві працюють сотні банків та інших фінансових організацій, які
+              видають позику під заставу гаражу. За допомогою спільноти
+              КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» ви можете терміново оформити кредит
+              готівкою на найбільш вигідних умовах:
+            </p>
+            <ul>
+              <li>
+                Можливість закласти нерухоме майно та терміново отримати до 80%
+                від ринкової вартості. Краще, ніж у банку.
+              </li>
+              <li>
+                Низька відсоткова ставка. Знайдете умови кращі – ми дамо ще
+                нижче.
+              </li>
+              <li>
+                Ніякої паперової тяганини. Від вас потрібний мінімальний пакет
+                документів.
+              </li>
+              <li>
+                Швидке ухвалення рішення. Можна отримати кредит під заставу на
+                день звернення, на відміну банків.
+              </li>
+              <li>
+                Укладання офіційного договору зі зручним графіком погашення.
+              </li>
+              <li>Безкоштовні консультації з будь-яких питань.</li>
+              <li>Зручний графік роботи офісу.</li>
+            </ul>
+          </div>
+        </section>
+        <section id="our-works" class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="section-header text-center">
+              <h2>Видані позики:</h2>
+            </div>
+          </div>
+
+          <div class="our-works-gallery f-carousel" id="our-works-gallery">
+            <div class="f-carousel__viewport">
+              <div class="f-carousel__track">
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Bucha.jpg"
+                    alt="Квартира. Буча. Вул. Гмирі Бориса, 11а"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>
+                        Квартира. Буча. <br />
+                        Вул. Гмирі Бориса, 11а
+                      </h3>
+                      <p>17 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Bucha.jpg"
+                      title="Квартира. Буча. Вул. Гмирі Бориса, 11а"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Chernihiv.jpg"
+                    alt="Квартира. Чернігів. Вул. Стрілецька, 106"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>Квартира. Чернігів. Вул. Стрілецька, 106</h3>
+                      <p>20 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Chernihiv.jpg"
+                      title="Квартира. Чернігів. Вул. Стрілецька, 106"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Chornohvardiiska.jpg"
+                    alt="Квартира. Київ. вул. Червоногвардійська (Хоткевича Гната), №8"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>Квартира. Київ. вул. Червоногвардійська, 8</h3>
+                      <p>50 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Chornohvardiiska.jpg"
+                      title="Квартира. Київ. вул. Червоногвардійська (Хоткевича Гната), №8"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Lebedeva.jpg"
+                    alt="Квартира. Київ. Вул. Лебедєва-Кумача, 5"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>
+                        Квартира. Київ <br />
+                        Вул. Лебедєва-Кумача, 5
+                      </h3>
+                      <p>90 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Lebedeva.jpg"
+                      title="Квартира. Київ. Вул. Лебедєва-Кумача, 5"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Pogreby.jpg"
+                    alt="Будинок. Київська обл. с.Погреби"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>
+                        Будинок. Київська обл. <br />
+                        с.Погреби
+                      </h3>
+                      <p>70 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Pogreby.jpg"
+                      title="Будинок. Київська обл. с.Погреби"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+                <div class="f-carousel__slide">
+                  <img
+                    src="/images/our-works/Sholom.jpg"
+                    alt="Квартира. Київ. Вул. Шолом Алейхема, 11а"
+                  />
+                  <div class="f-carousel__caption">
+                    <div class="f-carousel__text">
+                      <h3>
+                        Квартира. Київ. <br />
+                        Вул. Шолом Алейхема, 11а
+                      </h3>
+                      <p>25 000 $</p>
+                    </div>
+                    <a
+                      data-fancybox="gallery"
+                      href="/images/our-works/Sholom.jpg"
+                      title="Квартира. Київ. Вул. Шолом Алейхема, 11а"
+                    >
+                      Детальніше
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="register" class="row">
+          <div class="col-sm-12">
+            <div class="section-header text-center">
+              <h2>Online-заявка на позику під заставу приватного гаражу</h2>
+              <h4>
+                Залишились питання? Вкажіть їх нашому консультанту з видачі
+                позик.
+              </h4>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <form action="/send2.php" method="post" class="form app-form">
+              <div class="col-md-3 col-sm-3">
+                <input
+                  name="name"
+                  class="form-name"
+                  type="text"
+                  placeholder="ПІБ"
+                  required
+                />
+              </div>
+              <div class="col-md-2 col-sm-3">
+                <input
+                  name="telephone"
+                  class="form-telephone"
+                  type="tel"
+                  placeholder="Телефон"
+                  required
+                />
+              </div>
+              <div class="col-md-2 col-sm-3">
+                <input
+                  name="email"
+                  class="form-email"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-md-2 col-sm-3">
+                <input name="sum" class="form-sum" placeholder="Сума займу" />
+              </div>
+              <div class="col-md-3 col-sm-4" style="display: none">
+                <select name="ticket" class="form-ticket">
+                  <option value="">Тип застави</option>
+                  <option value="Дом" selected="selected">гараж</option>
+                </select>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <button type="submit" class="form-button">
+                  <span class="fa fa-sign-in"></span>
+                  <span class="form-button-text">Відправити</span>
+                </button>
+              </div>
+              <div
+                class="col-md-12 text-center text-muted small"
+                style="margin-bottom: 5px"
+              >
+                <span id="preds"
+                  >За рекомендацію наших послуг <b>100$</b> у подарунок у день
+                  підписання договору з новим клієнтом.</span
+                ><br />Залишаючи заявку, ви погоджуєтесь з&nbsp;<a
+                  href="/polytic.html"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  >політикою конфіденційності</a
+                >
+              </div>
+              <p class="form-notification" style="display: none">
+                Заявка отправлена. Заполните анкету для ускорения обработки.
+                <a class="form-button orange show-profile"
+                  ><span class="fa fa-rocket"></span> Ускорить</a
+                >
+              </p>
+            </form>
+          </div>
+        </section>
+        <section id="profile" class="row" style="display: none">
+          <div class="col-sm-12">
+            <div class="section-header">
+              <h2>Анкета на получение кредита под залог дома</h2>
+              <h4>
+                Чем больше полей заполнено корректно, тем выше вероятность
+                одобрения и лучше условия.
+              </h4>
+            </div>
+          </div>
+          <div class="col-sm-12 text-center">
+            <span class="fa fa-spinner fa-spin loader"></span>
+          </div>
+        </section>
+        <section id="reviews">
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            data-use-service-core
+            defer
+          ></script>
+          <div
+            class="elfsight-app-96a0152f-2063-4b2a-911d-d4a9e21537c0"
+            data-elfsight-app-lazy
+          ></div>
+        </section>
+        <div id="gotop" class="gotop fa fa-arrow-up"></div>
+      </div>
+    </div>
+    <footer id="footer">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.463470356631!2d30.61683017030834!3d50.45109362458714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5562b4d2433%3A0xdbaaa121a8bffbb0!2z0YPQuy4g0JrRgNCw0YHQvdC-0YLQutCw0YbQutCw0Y8sIDE2LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1722178238702!5m2!1sru!2sua"
+        width="100%"
+        height="600"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="footer">
+        <div class="container box">
+          <div id="info" class="row">
+            <div class="col-md-4">
+              <div class="footer-menu">
+                <ul>
+                  <li>
+                    <a
+                      href="mailto:boguslav.invest@gmail.com"
+                      title="По вопросам сотрудничества"
+                      >boguslav.invest@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div
+                itemscope=""
+                itemtype="http://schema.org/LocalBusiness"
+                class=""
+              >
+                <address>
+                  <p>
+                    <span itemprop="name" class="fn org"
+                      >КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ»</span
+                    >, 02100,&nbsp;<span
+                      id="office_address"
+                      itemprop="address"
+                      itemscope=""
+                      itemtype="http://schema.org/PostalAddress"
+                      class="adr"
+                      ><span itemprop="addressLocality" class="locality"
+                        >м. Київ</span
+                      >,
+                      <span itemprop="streetAddress" class="street-address"
+                        >вул.Червоноткацька, 16
+                      </span></span
+                    >, тел.:
+                    <span itemprop="telephone" id="phone-3" class=""
+                      >+38(063)444-0595</span
+                    >
+                  </p>
+                </address>
+                <meta
+                  itemprop="image"
+                  content="/wp-content/themes/creditors/images/logoe2.png"
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="copyrights">
+                <li>
+                  Сервіс, розташований на доменному імені
+                  https://goldinvest.com.ua/ (далі Веб-Сайт) публікує пропозицію
+                  про надання послуг з підбору позик та кредитів дистанційним
+                  способом.
+                </li>
+                <li>
+                  Веб-сайт не надає фінансових послуг і не відповідає за якість
+                  послуг, що надаються компаніями - партнерами.
+                </li>
+                <li>
+                  Сайт не несе відповідальності за збитки, які можуть виникнути
+                  внаслідок відносин Споживачів послуг Сайту та
+                  банків/організацій-партнерів.
+                </li>
+                <li>
+                  Послуги з видачі позик та кредитів надають
+                  організації/партнери, що мають на це відповідні ліцензії та
+                  дозволи.
+                </li>
+                <li>
+                  Веб-сайт розміщує інформацію з фінансової тематики без
+                  попередньої перевірки в тому обсязі, в якому її надали
+                  компанії-партнери, а також у тих межах, в яких її можна знайти
+                  у відкритих джерелах.
+                </li>
+                <br /><br />
+                <div id="disclaimer" style="display: none">
+                  <ul style="font-size: 12px; list-style-image: none">
+                    <li>
+                      Сервис, расположенный на доменном имени
+                      https://goldinvest.com.ua/, (далее Веб-Сайт) публикует
+                      предложение о предоставлении услуг по подбору займов и
+                      кредитов дистанционным способом.
+                    </li>
+                    <li>
+                      Веб-Сайт не оказывает финансовых услуг и не отвечает за
+                      качество услуг оказываемых компаниями - партнерами. Сайт
+                      не несёт ответственности за убытки, которые могут
+                      возникнуть в результате отношений Потребителей услуг Сайта
+                      и банков/организаций-партнёров.
+                    </li>
+                    <li>
+                      КРЕДИТНЫЙ ЦЕНТР «ДЕМЕЕВСКИЙ» () не оказывает финансовых
+                      услуг и не отвечает за качество услуг оказываемых
+                      компаниями - партнерами. Сайт не несёт ответственности за
+                      убытки, которые могут возникнуть в результате отношений
+                      Потребителей услуг Сайта и банков/организаций-партнёров.
+                    </li>
+                    <li>
+                      Услуги по выдаче займов и кредитов оказывают
+                      организации/партнеры имеющие на это соответствующие
+                      лицензии и разрешения.
+                    </li>
+                    <li>
+                      Веб-Сайт размещает информацию по финансовой тематике без
+                      предварительной проверки в том объёме, в котором её
+                      предоставили компании-партнёры, а также в тех пределах, в
+                      которых её можно найти в открытых источниках.
+                    </li>
+                  </ul>
+                </div>
+                <div id="disclamer2">
+                  <p style="font-size: 12px"></p>
+                </div>
+                Всі права захищені. © КРЕДИТНИЙ ЦЕНТР «ДЕМІЇВСЬКИЙ» @2024<br />
+                <a href="/polytic.html" target="_blank" rel="nofollow"
+                  >Політика конфіденційності</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="modal_form">
+      <span id="modal_close">X</span>
+      <div id="modal_content"></div>
+    </div>
+    <div id="overlay"></div>
+    <link
+      href="../../wp-content/themes/creditors/css/all15.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Belgrano"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script>
+      var mainCity = "Киев";
+    </script>
+    <script src="../../wp-content/themes/creditors/js/all25.min.js"></script>
+    <script>
+      $(document).ready(initCallbackButton);
+    </script>
+
+    <!-- Lightbox for our works -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="/js/our-works-gallery.js"></script>
+
+    <?php include ($_SERVER['DOCUMENT_ROOT'].'/scripts.php'); ?>
+    <script type="text/javascript">
+      window.WBK_Settings = {
+        whiteSaasCode: "43157471bc64bd10a52dd528999aae42",
+        serverUrl: "https://ua.envytools.com",
+      };
+      !(function () {
+        var l = document.createElement("link");
+        (l.rel = "stylesheet"),
+          (l.type = "text/css"),
+          (l.href = "https://cdn.envytools.com/widget/cbk.css"),
+          document.head.appendChild(l);
+        var t = document.createElement("script");
+        (t.type = "text/javascript"),
+          (t.async = !0),
+          (t.src = "https://cdn.envytools.com/widget/cbk.js"),
+          document.head.appendChild(t);
+      })();
+    </script>
+
+    <!-- HoverSignal -->
+    <script type="text/javascript">
+      (function (d, w) {
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "https://app.hoversignal.com/Api/Script/33cc81d3-efa9-4dca-bd16-a5dd4eeaeee0";
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window);
+    </script>
+    <!-- /Hoversignal -->
+  </body>
+</html>

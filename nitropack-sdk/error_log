@@ -1,0 +1,16 @@
+[06-Aug-2024 13:19:37 Europe/Helsinki] PHP Fatal error:  Uncaught NitroPack\SDK\ChallengeVerificationException: API server failed challenge verification when fetching the remote config in /home/gold/public_html/nitropack-sdk/NitroPack/SDK/Api/RemoteConfigFetcher.php:37
+Stack trace:
+#0 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(559): NitroPack\SDK\Api\RemoteConfigFetcher->get()
+#1 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(908): NitroPack\SDK\NitroPack->fetchConfig()
+#2 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(124): NitroPack\SDK\NitroPack->loadConfig()
+#3 /home/gold/public_html/nitropack-sdk/nitro.start.php(14): NitroPack\SDK\NitroPack->__construct()
+#4 {main}
+  thrown in /home/gold/public_html/nitropack-sdk/NitroPack/SDK/Api/RemoteConfigFetcher.php on line 37
+[06-Aug-2024 13:19:40 Europe/Helsinki] PHP Fatal error:  Uncaught NitroPack\SDK\ChallengeVerificationException: API server failed challenge verification when fetching the remote config in /home/gold/public_html/nitropack-sdk/NitroPack/SDK/Api/RemoteConfigFetcher.php:37
+Stack trace:
+#0 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(559): NitroPack\SDK\Api\RemoteConfigFetcher->get()
+#1 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(908): NitroPack\SDK\NitroPack->fetchConfig()
+#2 /home/gold/public_html/nitropack-sdk/NitroPack/SDK/NitroPack.php(124): NitroPack\SDK\NitroPack->loadConfig()
+#3 /home/gold/public_html/nitropack-sdk/nitro.start.php(14): NitroPack\SDK\NitroPack->__construct()
+#4 {main}
+  thrown in /home/gold/public_html/nitropack-sdk/NitroPack/SDK/Api/RemoteConfigFetcher.php on line 37
