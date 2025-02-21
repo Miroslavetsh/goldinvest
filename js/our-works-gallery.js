@@ -29,6 +29,18 @@
   new Carousel(container, options);
 })();
 
+// Carousel module for reviews
+(function () {
+  const container = document.getElementById("reviews-gallery");
+  const options = {
+    infinite: false,
+    Dots: true,
+    Slides: 4,
+  };
+
+  new Carousel(container, options);
+})();
+
 // Inlining content for our works gallery
 (function () {
   try {
@@ -112,4 +124,43 @@
   } catch (e) {
     console.warn(e);
   }
+})();
+
+// Read more for reviews
+(function () {
+  const reviews = document.querySelectorAll(".reviews__slide");
+
+  const getTrimmedText = (text) => text.trim().replaceAll("  ", "");
+  const getSlicedText = (text) => text.split(" ").slice(0, 11).join(" ");
+
+  reviews.forEach((review) => {
+    const readMore = review.querySelector(".reviews__read-more");
+    const reviewsText = review.querySelector(".reviews__text p");
+    const fullText = getTrimmedText(reviewsText.textContent);
+
+    let isOpen = false;
+    reviewsText.textContent = getSlicedText(fullText);
+    readMore.textContent = "Читать далее";
+
+    readMore.addEventListener("click", () => {
+      if (isOpen) {
+        reviewsText.textContent = getSlicedText(fullText);
+        readMore.textContent = "Читать далее";
+        isOpen = false;
+      } else {
+        reviewsText.textContent = fullText;
+        readMore.textContent = "Скрыть";
+        isOpen = true;
+      }
+    });
+  });
+})();
+
+// Reviews name text
+(function () {
+  const reviews = document.querySelectorAll(".reviews__name-text");
+
+  reviews.forEach((review) => {
+    review.textContent = review.textContent.trim().slice(0, 12).concat("...");
+  });
 })();
