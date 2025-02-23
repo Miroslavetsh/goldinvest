@@ -153,6 +153,19 @@
         isOpen = true;
       }
     });
+
+    // On click for buttons prev or next I need to collapse the text
+    // const prev = review.querySelector("#reviews .f-button.is-prev");
+    // const next = review.querySelector("#reviews .f-button.is-next");
+
+    // const collapseText = () => {
+    //   reviewsText.textContent = getSlicedText(fullText);
+    //   readMore.textContent = "Читать далее";
+    //   isOpen = false;
+    // };
+
+    // prev.addEventListener("click", collapseText);
+    // next.addEventListener("click", collapseText);
   });
 })();
 
@@ -161,6 +174,10 @@
   const reviews = document.querySelectorAll(".reviews__name-text");
 
   reviews.forEach((review) => {
-    review.textContent = review.textContent.trim().slice(0, 12).concat("...");
+    const textLength = review.textContent.trim().length;
+    const textSliced = review.textContent.trim().slice(0, 13);
+
+    review.textContent =
+      textLength > 13 ? textSliced.concat("...") : review.textContent;
   });
 })();

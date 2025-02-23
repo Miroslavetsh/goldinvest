@@ -327,6 +327,7 @@
 
 .reviews__text p {
   color: rgb(17, 17, 17);
+  height: 100%;
 }
 
 .reviews__name:hover {
