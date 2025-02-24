@@ -131,7 +131,7 @@
   const reviews = document.querySelectorAll(".reviews__slide");
 
   const getTrimmedText = (text) => text.trim().replaceAll("  ", "");
-  const getSlicedText = (text) => text.split(" ").slice(0, 11).join(" ");
+  const getSlicedText = (text) => text.slice(0, 90).concat("...");
 
   reviews.forEach((review) => {
     const readMore = review.querySelector(".reviews__read-more");
@@ -153,19 +153,6 @@
         isOpen = true;
       }
     });
-
-    // On click for buttons prev or next I need to collapse the text
-    // const prev = review.querySelector("#reviews .f-button.is-prev");
-    // const next = review.querySelector("#reviews .f-button.is-next");
-
-    // const collapseText = () => {
-    //   reviewsText.textContent = getSlicedText(fullText);
-    //   readMore.textContent = "Читать далее";
-    //   isOpen = false;
-    // };
-
-    // prev.addEventListener("click", collapseText);
-    // next.addEventListener("click", collapseText);
   });
 })();
 
