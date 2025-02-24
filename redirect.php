@@ -7,5 +7,3 @@ error_reporting(E_ALL);
 header('Location: /1.html');
 exit();
 ?>
-
-?>
