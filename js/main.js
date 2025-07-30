@@ -117,7 +117,6 @@ $(document).ready(function(){
     $(".popform-close").click(function(e){
         $(".popform-section").fadeOut();
     })
-
 })
 
 function scrollToDiv(div) {

@@ -37,15 +37,15 @@ $token = "6294972782:AAGOZFp3yliMIiswJosY3MOacwXMIzh88LQ";
 $chat_id = "6949709414";
 $arr = array(
   'Тема: ' => $subject,
-  'Контактный телефон: ' => $phone,
+  'Контактный телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
   'utm: ' => $utm,
 //  'Email' => $email
 );
-
+$txt = '';
 foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
+  $txt .= "<b>".$key."</b> ".$value."\n"; 
 };
-
+$txt = urlencode($txt);
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
     
 if ($verify == 'true'){

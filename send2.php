@@ -1,4 +1,33 @@
 <?php 
+$secretKey = '6Ldgbl8rAAAAAGb7Cl02JjvCJIuNqXA-SjsmtkF7';
+$token = $_POST['token'];
+$remoteIp = $_SERVER['REMOTE_ADDR'];
+
+$url = "https://www.google.com/recaptcha/api/siteverify";
+$data = [
+    'secret' => $secretKey,
+    'response' => $token,
+    'remoteip' => $remoteIp
+];
+
+$options = [
+    'http' => [
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data)
+    ]
+];
+
+$context  = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+$responseData = json_decode($response);
+
+if (!$responseData->success || $responseData->score < 0.5) {
+    // Капча не пройдена, можно еще проверить action, например $responseData->action === 'submit'
+    echo '<h1 style="color:red;">Подтвердите, что вы не робот.</h1>';
+    exit;
+}
+
 error_reporting(0);
 // Скрипт - разработка FineStyle.pro (telegram:@finestyle)
 $name = stripslashes(htmlspecialchars($_POST['name']));
@@ -47,7 +76,7 @@ $chat_id = "6949709414";
 $arr = array(
   'Тема: ' => $subject,
   'Имя: ' => $name,
-  'Контактный телефон: ' => $phone,
+  'Контактный телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
   'email: ' => $email,
   'Сумма: ' => $sum,
   'Тип залога: ' => $ticket,
@@ -55,13 +84,29 @@ $arr = array(
   'utm: ' => $utm,
 //  'Email' => $email
 );
-
+$txt = '';
 foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
-};
-
+  $txt .= "<b>".$key."</b> ".$value."\n"; 
+}
+$txt = urlencode($txt);
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");    
-    
+$webhook_url = "https://s1.apix-drive.com/web-hooks/167316/t6cmeqcp";
+$webhook_data = [
+    'name' => $name,
+    'phone' => $phone,
+    'email' => $email,
+    'sum' => $sum,
+    'ticket' => $ticket,
+    'utm' => $utm,
+    'ref' => $ref
+];
+$ch_webhook = curl_init($webhook_url);
+curl_setopt($ch_webhook, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch_webhook, CURLOPT_POST, true);
+curl_setopt($ch_webhook, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($ch_webhook, CURLOPT_POSTFIELDS, json_encode($webhook_data));
+$result = curl_exec($ch_webhook);
+curl_close($ch_webhook);    
 
     
 if ($verify == 'true'){
@@ -89,12 +134,14 @@ $st = str_replace(',','',$ticket);
 
 $obj = urlencode(trim($st));
 
-
-
+// Old form url
+//https://docs.google.com/forms/d/e/1FAIpQLSdxUdzNAU_0Oxg9TUtuYCs9-7ucIiitBYzLX1lkExMCDbjnyQ/formResponse
 // подготовка переменных
-curl_setopt($ch, CURLOPT_URL,"https://docs.google.com/forms/d/e/1FAIpQLSdxUdzNAU_0Oxg9TUtuYCs9-7ucIiitBYzLX1lkExMCDbjnyQ/formResponse");
+curl_setopt($ch, CURLOPT_URL,"https://docs.google.com/forms/d/e/1FAIpQLSea8Y6z0JX57QE-it2aKUhYl9fZINc7y4bvZmnqrmo2OgfAMQ/formResponse");
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "entry.766289845=$name2&entry.865215342=$phone&entry.347426090=$obj&entry.1887874440=$ploshad&entry.985144027=$city2&entry.1400002762=$sum&entry.340925317=$utm");
+// old options
+// curl_setopt($ch, CURLOPT_POSTFIELDS, "entry.766289845=$name2&entry.865215342=$phone&entry.347426090=$obj&entry.1887874440=$ploshad&entry.985144027=$city2&entry.1400002762=$sum&entry.340925317=$utm");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "entry.15250512=$name2&entry.1968814170=$phone&entry.652185541=$sum&entry.912023461=$ticket");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $server_output = curl_exec($ch);
 curl_close ($ch);
