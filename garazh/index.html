@@ -14,6 +14,16 @@ if(isset($_GET['utm_source'])){
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru-RU">
   <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17358060334"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17358060334');
+</script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -314,7 +324,7 @@ if(isset($_GET['utm_source'])){
               </div>
               <div class="navbar-collapse collapse sticky-hide city-box">
                 <a href="#" onclick="return false;" class="city"
-                  >Київ та Одеса</a
+                  >Київ та обл.</a
                 >
               </div>
               <div
@@ -346,9 +356,9 @@ if(isset($_GET['utm_source'])){
         <div class="container">
           <div class="row">
             <div class="blk">
-              <h1>Кредит під заставу гаражу у Києві та Одесі&nbsp;від 17,9% річних!</h1>
+              <h1>Взяти кредит під заставу гаражу у Києві та області від 17,9% річних!</h1>
               <h2 style="color: white">
-                Отримайте гроші під заставу терміново та без підтвердження
+                Гроші під заставу терміново та без підтвердження
                 доходів
               </h2>
             </div>
@@ -388,8 +398,8 @@ if(isset($_GET['utm_source'])){
             <div class="event-info">
               <div class="icon fa fa-rocket"></div>
               <div class="info">
-                <h3>За 24 години</h3>
-                <span>від моменту подання заявки до отримання грошей</span>
+                <h3>За 30 хвилин</h3>
+                <span>до моменту отримання грошей</span>
               </div>
             </div>
           </div>
@@ -2392,18 +2402,39 @@ if(isset($_GET['utm_source'])){
     <?php include ($_SERVER['DOCUMENT_ROOT'].'/scripts.php'); ?>
     </script>
 <script type="text/javascript">
+    window.WBK_Settings = {
+      whiteSaasCode: "43157471bc64bd10a52dd528999aae42",
+      serverUrl: "https://ua.envytools.com",
+    };
+    !(function () {
+      var l = document.createElement("link");
+      (l.rel = "stylesheet"),
+      (l.type = "text/css"),
+      (l.href = "https://cdn.envytools.com/widget/cbk.css"),
+      document.head.appendChild(l);
+      var t = document.createElement("script");
+      (t.type = "text/javascript"),
+      (t.async = !0),
+      (t.src = "https://cdn.envytools.com/widget/cbk.js"),
+      document.head.appendChild(t);
+    })();
+  </script>
+
+<script type="text/javascript">
 (function(d, w, s) {
     var widgetHash = 'sr6ifYbLBGAVxHduIsvm', bch = d.createElement(s); bch.type = 'text/javascript'; bch.async = true;
     bch.src = '//widgets.binotel.com/chat/widgets/' + widgetHash + '.js';
     var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(bch, sn);
 })(document, window, 'script');
 </script>
-<script type="text/javascript">
-  (function(d, w, s) {
-	var widgetHash = '0brspd6rv7sv09oib3kj', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-	gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-  })(document, window, 'script');
-</script>     
+<script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6Ldgbl8rAAAAACCqcvkd-fcSqz8cbfNhnVl-iGlu', {
+      action: 'submit'
+    }).then(function (token) {
+      document.getElementById('recaptcha-token').value = token;
+    });
+  });
+</script>
 </body>
 </html>
