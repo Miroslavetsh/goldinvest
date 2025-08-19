@@ -136,14 +136,24 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     });
   </script>
   <script src="https://www.google.com/recaptcha/api.js?render=6Ldgbl8rAAAAACCqcvkd-fcSqz8cbfNhnVl-iGlu"></script>
+
   <noscript>
     <div>
       <img src="https://mc.yandex.ru/watch/30760493" style="position: absolute; left: -9999px" alt="" />
     </div>
   </noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <title>
     Взяти кредит під заставу нерухомості терміново | Деміївський КЦ
   </title>
+
+  <script>
+    // Установка cookies через JavaScript (если PHP не работает)
+    document.cookie = "utm_source=performance; max-age=5184000; path=/";
+    document.cookie = "utm_medium=performance; max-age=5184000; path=/";
+    document.cookie = "utm_campaign=performance; max-age=5184000; path=/";
+  </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
   <link rel="shortcut icon" href="../favicon.ico" />
