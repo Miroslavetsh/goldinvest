@@ -32,7 +32,6 @@ error_reporting(0);
 // Скрипт - разработка FineStyle.pro (telegram:@finestyle)
 $name = stripslashes(htmlspecialchars($_POST['name']));
 $phone = stripslashes(htmlspecialchars($_POST['telephone']));
-$email = stripslashes(htmlspecialchars($_POST['email']));
 // Сумма
 $sum = stripslashes(htmlspecialchars($_POST['sum']));
 // Тип залога
@@ -60,31 +59,27 @@ else{
 $subject = 'Заявка! '; // заголовок письмя
 $addressat = "boguslav.invest@gmail.com"; // Ваш Электронный адрес
 
-$message = "Имя: {$name}\nКонтактный телефон: {$phone}\nemail: {$email}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$ref}\n utm:{$utm}  ";
+$message = "Имя: {$name}\nКонтактный телефон: {$phone}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$ref}\n utm:{$utm}  ";
 $verify = mail($addressat,$subject,$message,"Content-type:text/plain;charset=utf-8\r\n");
     
 $subject = 'Заявка с сайта goldinvest! ';
 $name = $_POST['name'];
 $phone = $_POST['telephone'];
-$email = $_POST['email'];
 $sum = $_POST['sum'];
 $ticket = $_POST['ticket'];
 $region = $_POST['region'];
 $ref = $_SERVER['HTTP_REFERER'];
-//$email = $_POST['email'];
 $token = "6294972782:AAGOZFp3yliMIiswJosY3MOacwXMIzh88LQ";
 $chat_id = "6949709414";
 $arr = array(
   'Тема: ' => $subject,
   'Имя: ' => $name,
   'Контактный телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
-  'email: ' => $email,
   'Сумма: ' => $sum,
   'Тип залога: ' => $ticket,
   'Расположение недвижимости: ' => $region,
   'Страница: ' => $ref,
   'utm: ' => $utm,
-//  'Email' => $email
 );
 $txt = '';
 foreach($arr as $key => $value) {
@@ -96,7 +91,6 @@ $webhook_url = "https://s1.apix-drive.com/web-hooks/167316/t6cmeqcp";
 $webhook_data = [
     'name' => $name,
     'phone' => $phone,
-    'email' => $email,
     'sum' => $sum,
     'ticket' => $ticket,
     'Расположение недвижимости:' => $region,
