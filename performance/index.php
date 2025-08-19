@@ -1,25 +1,26 @@
 <?php
-// Проверяем, содержит ли HTTP_USER_AGENT "Chrome-Lighthouse"
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse') !== false) {
-    // Перенаправляем на 1.html
-    header('Location: /1.html');
-    exit();
+  header('Location: /1.html');
+  exit();
 }
+setcookie('utm_source', "performance", time() + 60 * 60 * 24 * 60);
+setcookie('utm_medium', "performance", time() + 60 * 60 * 24 * 60);
+setcookie('utm_campaign', "performance", time() + 60 * 60 * 24 * 60);
 ?>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru-RU">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17358060334"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17358060334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'AW-17358060334');
-</script>
-<!-- Google Tag Manager -->
+    gtag('config', 'AW-17358060334');
+  </script>
+  <!-- Google Tag Manager -->
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -115,10 +116,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         };
       m[i].l = 1 * new Date();
       (k = e.createElement(t)),
-      (a = e.getElementsByTagName(t)[0]),
-      (k.async = 1),
-      (k.src = r),
-      a.parentNode.insertBefore(k, a);
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
     })(
       window,
       document,
@@ -146,6 +147,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   <title>
     Взяти кредит під заставу нерухомості терміново | Деміївський КЦ
   </title>
+
+  <script>
+    // Установка cookies через JavaScript (если PHP не работает)
+    document.cookie = "utm_source=performance; max-age=5184000; path=/";
+    document.cookie = "utm_medium=performance; max-age=5184000; path=/";
+    document.cookie = "utm_campaign=performance; max-age=5184000; path=/";
+  </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
   <link rel="shortcut icon" href="../favicon.ico" />
@@ -168,8 +176,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   <meta name="twitter:image" content="/wp-content/themes/creditors/images/main/bg-slide-00.jpg" />
   <style>
     html {
-    scroll-behavior: smooth;
+      scroll-behavior: smooth;
     }
+
     .header-bg {
       overflow: hidden;
     }
@@ -327,12 +336,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="navbar-collapse collapse sticky-hide callback-box">
               <a href="#register" class="nice-btn">Залишити заявку</a>
             </div>
-             <div class="phone-box sticky-hide">
+            <div class="phone-box sticky-hide">
               <div class="phone" title="Чи не додзвонилися? Ми передзвонимо вам на номер, з якого дзвонили!">
                 <span class=" ">
-               </span>
-               </div>             
-               <div class="navbar-collapse collapse worktime-box">
+                </span>
+              </div>
+              <div class="navbar-collapse collapse worktime-box">
                 <span class="fa fa-clock-o"></span> Щодня з 8:00 до 21:00
               </div>
             </div>
@@ -677,7 +686,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
           </div>
         </div>
-        <span style="display: block; text-align: center" id="preds">За рекомендацію послуг компанії&nbsp;виплачуємо&nbsp;<b>ПРЕМІЮ</b>&nbsp;у
+        <span style="display: block; text-align: center" id="preds">За рекомендацію послуг
+          компанії&nbsp;виплачуємо&nbsp;<b>ПРЕМІЮ</b>&nbsp;у
           подарунок у день
           підписання договору з новим клієнтом.</span>
       </section>
@@ -1088,7 +1098,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </div>
       </section>
 
-<section id="our-works" class="row">
+      <section id="our-works" class="row">
         <div class="col-md-12 col-sm-12">
           <div class="section-header text-center">
             <h2>Видані позики:</h2>
@@ -1284,25 +1294,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <input type="hidden" name="token" id="recaptcha-token">
             <div class="col-md-4 col-sm-4">
               <input name="name" class="form-name" type="text" placeholder="Ваше Ім'я" required />
-              </div>
-              <div class="col-md-4 col-sm-4">
+            </div>
+            <div class="col-md-4 col-sm-4">
               <input name="telephone" class="form-telephone" type="tel" placeholder="Телефон" required />
-              </div> 
-              <div class="col-md-4 col-sm-4">
+            </div>
+            <div class="col-md-4 col-sm-4">
               <select name="ticket" class="form-ticket">
                 <option value="">Яка сума вас цікавить?</option>
                 <option value="від 80 тис. до 1 млн.грн">від 80 тис. до 1 млн.грн</option>
-                <option value="від 1 млн.грн та більше">від 1 млн.грн та більше</option>              
-               </select>
-              </div>
-              <div class="col-md-4 col-sm-4">
+                <option value="від 1 млн.грн та більше">від 1 млн.грн та більше</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-sm-4">
               <select name="region" class="form-ticket">
                 <option value="">Де розташована нерухомість?</option>
                 <option value="Київська область">Київська область</option>
                 <option value="Одеська область">Одеська область</option>
               </select>
             </div>
-             <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-4">
               <button type="submit" class="form-button">
                 <span class="fa fa-sign-in"></span>
                 <span class="form-button-text">Відправити</span>
@@ -2259,10 +2269,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     $(document).ready(initCallbackButton);
   </script>
   <!-- Lightbox for our works -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="/js/our-works-gallery.js"></script>
-  <?php include ($_SERVER['DOCUMENT_ROOT'].'/scripts.php'); ?>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="/js/our-works-gallery.js"></script>
+  <?php include($_SERVER['DOCUMENT_ROOT'] . '/scripts.php'); ?>
 
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'" />
@@ -2275,7 +2285,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <link rel="stylesheet" href="/styles/styles.css" />
   </noscript>
 
-<script type="text/javascript">
+  <script type="text/javascript">
     window.WBK_Settings = {
       whiteSaasCode: "43157471bc64bd10a52dd528999aae42",
       serverUrl: "https://ua.envytools.com",
@@ -2283,32 +2293,33 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     !(function () {
       var l = document.createElement("link");
       (l.rel = "stylesheet"),
-      (l.type = "text/css"),
-      (l.href = "https://cdn.envytools.com/widget/cbk.css"),
-      document.head.appendChild(l);
+        (l.type = "text/css"),
+        (l.href = "https://cdn.envytools.com/widget/cbk.css"),
+        document.head.appendChild(l);
       var t = document.createElement("script");
       (t.type = "text/javascript"),
-      (t.async = !0),
-      (t.src = "https://cdn.envytools.com/widget/cbk.js"),
-      document.head.appendChild(t);
+        (t.async = !0),
+        (t.src = "https://cdn.envytools.com/widget/cbk.js"),
+        document.head.appendChild(t);
     })();
   </script>
 
-<script type="text/javascript">
-(function(d, w, s) {
-    var widgetHash = 'sr6ifYbLBGAVxHduIsvm', bch = d.createElement(s); bch.type = 'text/javascript'; bch.async = true;
-    bch.src = '//widgets.binotel.com/chat/widgets/' + widgetHash + '.js';
-    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(bch, sn);
-})(document, window, 'script');
-</script>
-<script>
-  grecaptcha.ready(function () {
-    grecaptcha.execute('6Ldgbl8rAAAAACCqcvkd-fcSqz8cbfNhnVl-iGlu', {
-      action: 'submit'
-    }).then(function (token) {
-      document.getElementById('recaptcha-token').value = token;
+  <script type="text/javascript">
+    (function (d, w, s) {
+      var widgetHash = 'sr6ifYbLBGAVxHduIsvm', bch = d.createElement(s); bch.type = 'text/javascript'; bch.async = true;
+      bch.src = '//widgets.binotel.com/chat/widgets/' + widgetHash + '.js';
+      var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(bch, sn);
+    })(document, window, 'script');
+  </script>
+  <script>
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6Ldgbl8rAAAAACCqcvkd-fcSqz8cbfNhnVl-iGlu', {
+        action: 'submit'
+      }).then(function (token) {
+        document.getElementById('recaptcha-token').value = token;
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>
