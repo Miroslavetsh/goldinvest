@@ -27,7 +27,7 @@ else{
 $subject = 'Заявка на звонок по кредиту '; // заголовок письмя
 $addressat = "boguslav.invest@gmail.com"; // Ваш Электронный адрес
 
-$message = "Контактный телефон: {$phone}\n utm:{$utm}  ";
+$message = "Телефон: {$phone}\n utm:{$utm}  ";
 $verify = mail($addressat,$subject,$message,"Content-type:text/plain;charset=utf-8\r\n");
     
 $phone = $_POST['telephone'];
@@ -37,7 +37,7 @@ $token = "6294972782:AAGOZFp3yliMIiswJosY3MOacwXMIzh88LQ";
 $chat_id = "6949709414";
 $arr = array(
   'Тема: ' => $subject,
-  'Контактный телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
+  'Телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
   'utm: ' => $utm,
 //  'Email' => $email
 );

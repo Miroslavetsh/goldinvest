@@ -60,7 +60,7 @@ else{
 $subject = 'Заявка! '; // заголовок письмя
 $addressat = "boguslav.invest@gmail.com"; // Ваш Электронный адрес
 
-$message = "Имя: {$name}\nКонтактный телефон: {$phone}\nemail: {$email}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$ref}\n utm:{$utm}  ";
+$message = "Имя: {$name}\nТелефон: {$phone}\nemail: {$email}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$ref}\n utm:{$utm}  ";
 $verify = mail($addressat,$subject,$message,"Content-type:text/plain;charset=utf-8\r\n");
     
 $subject = 'Заявка с сайта goldinvest! ';
@@ -76,7 +76,7 @@ $chat_id = "6949709414";
 $arr = array(
   'Тема: ' => $subject,
   'Имя: ' => $name,
-  'Контактный телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
+  'Телефон: ' => "<a href='tel:+{$phone}'>{$phone}</a>",
   'email: ' => $email,
   'Сумма: ' => $sum,
   'Тип залога: ' => $ticket,
