@@ -1,0 +1,58 @@
+[12-Mar-2020 15:48:13 Europe/Helsinki] PHP Notice:  Undefined index: /perekreditacia/ in /home/gold/public_html/textolite/textolite.php on line 1
+[04-Dec-2023 18:19:51 Europe/Helsinki] PHP Notice:  Undefined index: /perekreditacia/ in /home/gold/public_html/textolite/textolite.php on line 1
+[04-Dec-2023 18:20:32 Europe/Helsinki] PHP Notice:  Undefined index: /perekreditacia/ in /home/gold/public_html/textolite/textolite.php on line 1
+[04-Dec-2023 18:23:31 Europe/Helsinki] PHP Notice:  Undefined index: /perekreditacia/ in /home/gold/public_html/textolite/textolite.php on line 1
+[14-Jun-2025 17:18:31 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[14-Jun-2025 17:20:27 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[15-Jun-2025 08:22:33 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[15-Jun-2025 20:06:49 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[16-Jun-2025 08:19:06 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[16-Jun-2025 18:58:16 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[16-Jun-2025 19:00:17 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[16-Jun-2025 19:04:10 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[17-Jun-2025 07:26:29 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[17-Jun-2025 19:29:52 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[17-Jun-2025 19:37:53 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[18-Jun-2025 07:25:40 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[26-Jul-2025 00:38:03 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[27-Jul-2025 01:07:31 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 00:54:58 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 01:06:34 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 12:07:17 Europe/Helsinki] PHP Warning:  Undefined array key "/credit_pod_zalog_nedvizhimosti/" in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 12:07:18 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 12:07:40 Europe/Helsinki] PHP Warning:  Undefined array key "/credit_pod_zalog_nedvizhimosti/" in /home/gold/public_html/textolite/textolite.php on line 1
+[01-Aug-2025 12:07:40 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 00:23:30 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 00:26:02 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 00:26:07 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 01:25:29 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 01:55:05 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 18:20:17 Europe/Helsinki] PHP Warning:  Undefined array key "/credit_pod_zalog_nedvizhimosti/kommercheskaya/" in /home/gold/public_html/textolite/textolite.php on line 1
+[02-Aug-2025 18:20:17 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 00:54:24 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 00:54:32 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 00:56:58 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 13:34:11 Europe/Helsinki] PHP Warning:  Undefined array key "/pozika_pid_zastavu/" in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 13:34:11 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 17:13:03 Europe/Helsinki] PHP Warning:  Undefined array key "/credit_pid_zastavu/" in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 17:13:03 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 17:40:26 Europe/Helsinki] PHP Warning:  Undefined array key "/credit_pid_zastavu_zhitla/" in /home/gold/public_html/textolite/textolite.php on line 1
+[03-Aug-2025 17:40:26 Europe/Helsinki] PHP Deprecated:  str_ireplace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[05-Aug-2025 01:25:49 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[06-Aug-2025 01:50:51 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[06-Aug-2025 01:58:22 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[06-Aug-2025 02:40:05 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 00:42:20 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 00:45:48 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 00:45:49 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 01:01:29 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 02:54:19 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[07-Aug-2025 03:09:00 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:05:14 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:07:22 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:16:01 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:16:05 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:16:15 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[08-Aug-2025 01:30:10 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[09-Aug-2025 01:33:35 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
+[09-Aug-2025 01:37:40 Europe/Helsinki] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/gold/public_html/textolite/textolite.php on line 1
