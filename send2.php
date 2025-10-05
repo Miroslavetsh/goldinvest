@@ -22,11 +22,11 @@ $context  = stream_context_create($options);
 $response = file_get_contents($url, false, $context);
 $responseData = json_decode($response);
 
-// if (!$responseData->success || $responseData->score < 0.5) {
-//     // Капча не пройдена, можно еще проверить action, например $responseData->action === 'submit'
-//     echo '<h1 style="color:red;">Подтвердите, что вы не робот.</h1>';
-//     exit;
-// }
+if (!$responseData->success || $responseData->score < 0.5) {
+    // Капча не пройдена, можно еще проверить action, например $responseData->action === 'submit'
+    echo '<h1 style="color:red;">Подтвердите, что вы не робот.</h1>';
+    exit;
+}
 
 error_reporting(0);
 // Скрипт - разработка FineStyle.pro (telegram:@finestyle)
@@ -99,24 +99,24 @@ foreach($arr as $key => $value) {
 }
 $txt = urlencode($txt);
 
-// $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");    
-// $webhook_url = "https://s1.apix-drive.com/web-hooks/167316/t6cmeqcp";
-// $webhook_data = [
-//     'name' => $name,
-//     'phone' => $phone,
-//     'sum' => $sum,
-//     'ticket' => $ticket,
-//     'Расположение недвижимости:' => $region,
-//     'utm' => $utm,
-//     'ref' => $ref
-// ];
-// $ch_webhook = curl_init($webhook_url);
-// curl_setopt($ch_webhook, CURLOPT_RETURNTRANSFER, true);
-// curl_setopt($ch_webhook, CURLOPT_POST, true);
-// curl_setopt($ch_webhook, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-// curl_setopt($ch_webhook, CURLOPT_POSTFIELDS, json_encode($webhook_data));
-// $result = curl_exec($ch_webhook);
-// curl_close($ch_webhook);    
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");    
+$webhook_url = "https://s1.apix-drive.com/web-hooks/167316/t6cmeqcp";
+$webhook_data = [
+    'name' => $name,
+    'phone' => $phone,
+    'sum' => $sum,
+    'ticket' => $ticket,
+    'Расположение недвижимости:' => $region,
+    'utm' => $utm,
+    'ref' => $ref
+];
+$ch_webhook = curl_init($webhook_url);
+curl_setopt($ch_webhook, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch_webhook, CURLOPT_POST, true);
+curl_setopt($ch_webhook, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($ch_webhook, CURLOPT_POSTFIELDS, json_encode($webhook_data));
+$result = curl_exec($ch_webhook);
+curl_close($ch_webhook);    
 
     
 if ($verify == 'true'){
