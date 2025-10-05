@@ -38,18 +38,29 @@ $sum = stripslashes(htmlspecialchars($_POST['sum']));
 $ticket = stripslashes(htmlspecialchars($_POST['ticket']));
 
 $ref = $_SERVER['HTTP_REFERER'];
+$sitepage = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-if(isset($_COOKIE['utm_source'])) {
-$utm_source = htmlspecialchars($_COOKIE['utm_source']); 
-$utm_medium = htmlspecialchars($_COOKIE['utm_medium']);
-$utm_campaign = htmlspecialchars($_COOKIE['utm_campaign']);
+$utm_source = '';
+$utm_medium = '';
+$utm_campaign = '';
 
-$utm = $utm_source.','.$utm_medium.','.$utm_campaign;
-// echo $utm;
-} 
-else { 
-    $utm = ' '; 
+if (!empty($ref)) {
+    $parsed_url = parse_url($ref);
+    if (isset($parsed_url['query'])) {
+        parse_str($parsed_url['query'], $query_params);
+        
+        $utm_source = isset($query_params['utm_source']) ? htmlspecialchars($query_params['utm_source']) : '';
+        $utm_medium = isset($query_params['utm_medium']) ? htmlspecialchars($query_params['utm_medium']) : '';
+        $utm_campaign = isset($query_params['utm_campaign']) ? htmlspecialchars($query_params['utm_campaign']) : '';
+    }
 }
+
+$utm_parts = [];
+if (!empty($utm_source)) $utm_parts[] = "utm_source: $utm_source";
+if (!empty($utm_medium)) $utm_parts[] = "utm_medium: $utm_medium";
+if (!empty($utm_campaign)) $utm_parts[] = "utm_campaign: $utm_campaign";
+
+$utm = !empty($utm_parts) ? implode(', ', $utm_parts) : '';
 
 if(empty($phone)){
 echo '<h1 style="color:red;">Пожалуйста заполните все поля</h1>';
@@ -59,7 +70,7 @@ else{
 $subject = 'Заявка! '; // заголовок письмя
 $addressat = "boguslav.invest@gmail.com"; // Ваш Электронный адрес
 
-$message = "Имя: {$name}\nКонтактный телефон: {$phone}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$ref}\n utm:{$utm}  ";
+$message = "Имя: {$name}\nКонтактный телефон: {$phone}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$sitepage}\n utm:{$utm}  ";
 $verify = mail($addressat,$subject,$message,"Content-type:text/plain;charset=utf-8\r\n");
     
 $subject = 'Заявка с сайта goldinvest! ';
@@ -78,14 +89,16 @@ $arr = array(
   'Сумма: ' => $sum,
   'Тип залога: ' => $ticket,
   'Расположение недвижимости: ' => $region,
-  'Страница: ' => $ref,
-  'utm: ' => $utm,
+  'Страница: ' => $sitepage,
 );
+if (!empty($utm)) $arr['utm: '] = $utm;
+
 $txt = '';
 foreach($arr as $key => $value) {
   $txt .= "<b>".$key."</b> ".$value."\n"; 
 }
 $txt = urlencode($txt);
+
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");    
 $webhook_url = "https://s1.apix-drive.com/web-hooks/167316/t6cmeqcp";
 $webhook_data = [
