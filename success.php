@@ -166,8 +166,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="block_success">					
             <h2 style="text-transform: uppercase;">Вітаємо! Ваше замовлення прийнято!</h2>
             <p style="text-align: center; " >Фахівець зв'яжеться з Вами найближчим часом</p>
-            <a style="color: #000000; display: block; text-align: center; " href="/"> На головну сторінку </a>
+            <a id="home-link" style="color: #000000; display: block; text-align: center; " href="/"> На головну сторінку </a>
 			</div>			
 
+      <script>
+        const referrer = new URL('<?php echo isset($_GET['ref']) ? htmlspecialchars($_GET['ref']) : ''; ?>')
+        const homeLink = document.getElementById('home-link');
+        homeLink.href = referrer.href;
+      </script>
 			</body>
 </html>
