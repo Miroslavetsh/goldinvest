@@ -38,7 +38,7 @@ $sum = stripslashes(htmlspecialchars($_POST['sum']));
 $ticket = stripslashes(htmlspecialchars($_POST['ticket']));
 
 $ref = $_SERVER['HTTP_REFERER'];
-$sitepage = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$sitepage = parse_url($ref, PHP_URL_PATH);
 
 $utm_source = '';
 $utm_medium = '';
@@ -75,7 +75,7 @@ if (empty($phone)) {
     $message = "Имя: {$name}\nКонтактный телефон: {$phone}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$sitepage}\n utm:{$utm}  ";
     $verify = mail($addressat, $subject, $message, "Content-type:text/plain;charset=utf-8\r\n");
 
-    $subject = 'Заявка с сайта goldinvest! ';
+    $subject = 'Заявка с сайта goldinvest' . $sitepage . '! ';
     $name = $_POST['name'];
     $phone = $_POST['telephone'];
     $sum = $_POST['sum'];
