@@ -52,7 +52,9 @@ if (empty($phone)) {
 
 	if ($verify == 'true') {
 
-		include 'success.php';
+		$success_params = http_build_query(['ref' => $ref]);
+		header("Location: success.php?$success_params");
+		exit;
 
 	} else {
 		echo '<h1 style="color:red;">Произошла ошибка!</h1>';
