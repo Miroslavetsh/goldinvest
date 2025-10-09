@@ -24,6 +24,9 @@ echo '<h1 style="color:red;">Пожалуйста заполните все по
 echo '<meta http-equiv="refresh" content="2; url=http://'.$_SERVER['SERVER_NAME'].'">';
 }
 else{
+$ref = $_SERVER['HTTP_REFERER'];
+$sitepage = parse_url($ref, PHP_URL_PATH);
+	
 $subject = 'Заявка на звонок по кредиту '; // заголовок письмя
 $addressat = "boguslav.invest@gmail.com"; // Ваш Электронный адрес
 
@@ -31,7 +34,7 @@ $message = "Телефон: {$phone}\n utm:{$utm}  ";
 $verify = mail($addressat,$subject,$message,"Content-type:text/plain;charset=utf-8\r\n");
     
 $phone = $_POST['telephone'];
-$subject = 'Заявка на звонок с сайта goldinvest.com.ua '; //
+$subject = 'Заявка на звонок с сайта ' . $sitepage;
 //$email = $_POST['email'];
 $token = "6294972782:AAGOZFp3yliMIiswJosY3MOacwXMIzh88LQ";
 $chat_id = "6949709414";
