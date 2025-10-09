@@ -5,17 +5,31 @@ $phone = stripslashes(htmlspecialchars($_POST['telephone']));
 $name2 = 'Заказан звонок по кредиту ';
 
 
-if (isset($_COOKIE['utm_source'])) {
-	$utm_source = htmlspecialchars($_COOKIE['utm_source']);
-	$utm_medium = htmlspecialchars($_COOKIE['utm_medium']);
-	$utm_campaign = htmlspecialchars($_COOKIE['utm_campaign']);
 
-	$utm = $utm_source . ',' . $utm_medium . ',' . $utm_campaign;
-	// echo $utm;
-} else {
-	$utm = '';
+$utm_source = '';
+$utm_medium = '';
+$utm_campaign = '';
+
+if (!empty($ref)) {
+	$parsed_url = parse_url($ref);
+	if (isset($parsed_url['query'])) {
+		parse_str($parsed_url['query'], $query_params);
+
+		$utm_source = isset($query_params['utm_source']) ? htmlspecialchars($query_params['utm_source']) : '';
+		$utm_medium = isset($query_params['utm_medium']) ? htmlspecialchars($query_params['utm_medium']) : '';
+		$utm_campaign = isset($query_params['utm_campaign']) ? htmlspecialchars($query_params['utm_campaign']) : '';
+	}
 }
 
+$utm_parts = [];
+if (!empty($utm_source))
+	$utm_parts[] = "utm_source: $utm_source";
+if (!empty($utm_medium))
+	$utm_parts[] = "utm_medium: $utm_medium";
+if (!empty($utm_campaign))
+	$utm_parts[] = "utm_campaign: $utm_campaign";
+
+$utm = !empty($utm_parts) ? implode(', ', $utm_parts) : '';
 
 
 if (empty($phone)) {
@@ -32,7 +46,7 @@ if (empty($phone)) {
 	$verify = mail($addressat, $subject, $message, "Content-type:text/plain;charset=utf-8\r\n");
 
 	$phone = $_POST['telephone'];
-	$subject = 'Заявка на звонок с сайта ' . $sitepage;
+	$subject = 'Заявка на звонок с сайта goldinvest.com.ua' . $sitepage;
 	//$email = $_POST['email'];
 	$token = "6294972782:AAGOZFp3yliMIiswJosY3MOacwXMIzh88LQ";
 	$chat_id = "6949709414";
