@@ -75,7 +75,7 @@ if (empty($phone)) {
     $message = "Имя: {$name}\nКонтактный телефон: {$phone}\nСумма: {$sum}\nТип залога: {$ticket}\nСтраница: {$sitepage}\n utm:{$utm}  ";
     $verify = mail($addressat, $subject, $message, "Content-type:text/plain;charset=utf-8\r\n");
 
-    $subject = 'Заявка с сайта goldinvest' . $sitepage . '! ';
+    $subject = 'Заявка с сайта goldinvest.com.ua' . $sitepage;
     $name = $_POST['name'];
     $phone = $_POST['telephone'];
     $sum = $_POST['sum'];
